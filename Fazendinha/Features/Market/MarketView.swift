@@ -22,7 +22,7 @@ struct MarketView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("In the barn")
                             .font(.title2.bold())
-                            .foregroundStyle(.farmSoil)
+                            .foregroundStyle(Color.farmSoil)
 
                         ForEach(SeedType.allCases) { seed in
                             MarketRow(
@@ -74,13 +74,13 @@ private struct MarketHeader: View {
                 .accessibilityHidden(true)
             Text("Fresh from your farm")
                 .font(.title.bold())
-                .foregroundStyle(.farmSoil)
+                .foregroundStyle(Color.farmSoil)
             HStack(spacing: 18) {
                 Label("\(coins) coins", systemImage: "dollarsign.circle.fill")
                 Label("\(inventoryValue) value", systemImage: "tag.fill")
             }
             .font(.subheadline.bold())
-            .foregroundStyle(.farmGreen)
+            .foregroundStyle(Color.farmGreen)
         }
         .frame(maxWidth: .infinity)
         .padding(22)
@@ -99,13 +99,13 @@ private struct MarketRow: View {
             Text(seed.emoji)
                 .font(.system(size: 38))
                 .frame(width: 54, height: 54)
-                .background(.farmLightGreen.opacity(0.35), in: RoundedRectangle(cornerRadius: 15))
+                .background(Color.farmLightGreen.opacity(0.35), in: RoundedRectangle(cornerRadius: 15))
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(seed.displayName)
                     .font(.headline)
-                    .foregroundStyle(.farmSoil)
+                    .foregroundStyle(Color.farmSoil)
                 Text("\(quantity) in barn · \(seed.sellPrice) coins each")
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -115,7 +115,7 @@ private struct MarketRow: View {
 
             Button("Sell") { onSell() }
                 .buttonStyle(.borderedProminent)
-                .tint(.farmGreen)
+                .tint(Color.farmGreen)
                 .disabled(isSaving || quantity == 0)
                 .accessibilityLabel("Sell all \(quantity) \(seed.displayName.lowercased())")
                 .accessibilityHint("Earns \(quantity * seed.sellPrice) coins")
@@ -124,4 +124,3 @@ private struct MarketRow: View {
         .background(.white, in: RoundedRectangle(cornerRadius: 19))
     }
 }
-

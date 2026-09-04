@@ -23,7 +23,7 @@ struct GameShellView: View {
                         Label("Market", systemImage: "basket.fill")
                     }
                 }
-                .tint(.farmGreen)
+                .tint(Color.farmGreen)
             }
         }
         .alert(
@@ -56,10 +56,10 @@ private struct LoadingFarmView: View {
                 Text("🌱")
                     .font(.system(size: 64))
                 ProgressView()
-                    .tint(.farmGreen)
+                    .tint(Color.farmGreen)
                 Text("Preparing your farm…")
                     .font(.headline)
-                    .foregroundStyle(.farmSoil)
+                    .foregroundStyle(Color.farmSoil)
             }
         }
     }
@@ -73,4 +73,3 @@ extension Color {
     static let farmSoil = Color(red: 0.35, green: 0.22, blue: 0.14)
     static let farmGold = Color(red: 0.96, green: 0.68, blue: 0.18)
 }
-

@@ -25,7 +25,7 @@ struct FarmView: View {
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Your fields")
                             .font(.title2.bold())
-                            .foregroundStyle(.farmSoil)
+                            .foregroundStyle(Color.farmSoil)
                         Text("Plant a seed, let it grow, then tap to harvest.")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
@@ -83,21 +83,21 @@ private struct FarmHeader: View {
             VStack(spacing: 5) {
                 Label("\(coins)", systemImage: "dollarsign.circle.fill")
                     .font(.title3.bold())
-                    .foregroundStyle(.farmSoil)
+                    .foregroundStyle(Color.farmSoil)
 
                 if isSaving {
                     ProgressView()
                         .controlSize(.mini)
-                        .tint(.farmSoil)
+                        .tint(Color.farmSoil)
                 } else {
                     Text("coins")
                         .font(.caption)
-                        .foregroundStyle(.farmSoil.opacity(0.7))
+                        .foregroundStyle(Color.farmSoil.opacity(0.7))
                 }
             }
             .padding(.horizontal, 14)
             .padding(.vertical, 10)
-            .background(.farmGold, in: RoundedRectangle(cornerRadius: 16))
+            .background(Color.farmGold, in: RoundedRectangle(cornerRadius: 16))
             .accessibilityElement(children: .combine)
             .accessibilityLabel("Balance: \(coins) coins")
         }
@@ -145,7 +145,7 @@ private struct PlotCard: View {
         .background(.white.opacity(0.94), in: RoundedRectangle(cornerRadius: 20))
         .overlay {
             RoundedRectangle(cornerRadius: 20)
-                .stroke(.farmLightGreen.opacity(0.8), lineWidth: 1)
+                .stroke(Color.farmLightGreen.opacity(0.8), lineWidth: 1)
         }
         .shadow(color: .black.opacity(0.06), radius: 8, y: 4)
     }
@@ -160,12 +160,12 @@ private struct PlotCard: View {
 
         Text(crop.seed.displayName)
             .font(.headline)
-            .foregroundStyle(.farmSoil)
+            .foregroundStyle(Color.farmSoil)
 
         if ready {
             Text("Ready to harvest")
                 .font(.caption)
-                .foregroundStyle(.farmGreen)
+                .foregroundStyle(Color.farmGreen)
 
             Button(action: onHarvest) {
                 Label("Harvest", systemImage: "basket.fill")
@@ -176,7 +176,7 @@ private struct PlotCard: View {
             .accessibilityHint("Moves one \(crop.seed.displayName.lowercased()) to your barn")
         } else {
             ProgressView(value: crop.progress(at: date))
-                .tint(.farmGreen)
+                .tint(Color.farmGreen)
 
             Text(crop.remainingDescription(at: date))
                 .font(.caption.monospacedDigit())
@@ -194,7 +194,7 @@ private struct PlotCard: View {
                 .accessibilityHidden(true)
             Text("Fresh soil")
                 .font(.headline)
-                .foregroundStyle(.farmSoil)
+                .foregroundStyle(Color.farmSoil)
             Text("Choose a seed")
                 .font(.caption)
                 .foregroundStyle(.secondary)
@@ -238,7 +238,7 @@ private struct SeedPickerView: View {
                 }
                 .padding(20)
             }
-            .background(.farmCream)
+            .background(Color.farmCream)
             .navigationTitle("Choose a seed")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -259,19 +259,19 @@ private struct SeedRow: View {
             Text(seed.emoji)
                 .font(.system(size: 42))
                 .frame(width: 58, height: 58)
-                .background(.farmLightGreen.opacity(0.35), in: RoundedRectangle(cornerRadius: 16))
+                .background(Color.farmLightGreen.opacity(0.35), in: RoundedRectangle(cornerRadius: 16))
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 5) {
                 Text(seed.displayName)
                     .font(.headline)
-                    .foregroundStyle(.farmSoil)
+                    .foregroundStyle(Color.farmSoil)
                 Label(seed.growthDescription, systemImage: "clock")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                 Text("Sells for \(seed.sellPrice) coins")
                     .font(.caption)
-                    .foregroundStyle(.farmGreen)
+                    .foregroundStyle(Color.farmGreen)
             }
 
             Spacer()
@@ -304,4 +304,3 @@ struct FarmButtonStyle: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 0.98 : 1)
     }
 }
-
