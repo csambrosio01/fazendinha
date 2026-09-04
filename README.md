@@ -42,3 +42,6 @@ Switching to a server later means injecting `RemoteGameRepository` instead of `L
 
 Start with [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](AGENTS.md), and the issues marked `good first issue`. Pull requests run an iOS simulator build and the game-rule tests.
 
+## License
+
+Fazendinha is available under the [MIT License](LICENSE).
