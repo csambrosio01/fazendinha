@@ -1,52 +1,52 @@
 import Foundation
 
 actor LocalGameRepository: GameRepository {
-    private let fileURL: URL
-    private let encoder: JSONEncoder
-    private let decoder: JSONDecoder
+  private let fileURL: URL
+  private let encoder: JSONEncoder
+  private let decoder: JSONDecoder
 
-    init(fileURL: URL = LocalGameRepository.defaultFileURL()) {
-        self.fileURL = fileURL
+  init(fileURL: URL = LocalGameRepository.defaultFileURL()) {
+    self.fileURL = fileURL
 
-        let encoder = JSONEncoder()
-        encoder.dateEncodingStrategy = .iso8601
-        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-        self.encoder = encoder
+    let encoder = JSONEncoder()
+    encoder.dateEncodingStrategy = .iso8601
+    encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+    self.encoder = encoder
 
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
-        self.decoder = decoder
+    let decoder = JSONDecoder()
+    decoder.dateDecodingStrategy = .iso8601
+    self.decoder = decoder
+  }
+
+  func load() async throws -> GameState? {
+    guard FileManager.default.fileExists(atPath: fileURL.path) else {
+      return nil
     }
 
-    func load() async throws -> GameState? {
-        guard FileManager.default.fileExists(atPath: fileURL.path) else {
-            return nil
-        }
+    let data = try Data(contentsOf: fileURL)
+    return try decoder.decode(GameState.self, from: data)
+  }
 
-        let data = try Data(contentsOf: fileURL)
-        return try decoder.decode(GameState.self, from: data)
-    }
+  func save(_ state: GameState) async throws -> GameState {
+    let directory = fileURL.deletingLastPathComponent()
+    try FileManager.default.createDirectory(
+      at: directory,
+      withIntermediateDirectories: true
+    )
 
-    func save(_ state: GameState) async throws -> GameState {
-        let directory = fileURL.deletingLastPathComponent()
-        try FileManager.default.createDirectory(
-            at: directory,
-            withIntermediateDirectories: true
-        )
+    let data = try encoder.encode(state)
+    try data.write(to: fileURL, options: .atomic)
+    return state
+  }
 
-        let data = try encoder.encode(state)
-        try data.write(to: fileURL, options: .atomic)
-        return state
-    }
+  static func defaultFileURL() -> URL {
+    let base = FileManager.default.urls(
+      for: .applicationSupportDirectory,
+      in: .userDomainMask
+    ).first ?? FileManager.default.temporaryDirectory
 
-    static func defaultFileURL() -> URL {
-        let base = FileManager.default.urls(
-            for: .applicationSupportDirectory,
-            in: .userDomainMask
-        ).first ?? FileManager.default.temporaryDirectory
-
-        return base
-            .appendingPathComponent("Fazendinha", isDirectory: true)
-            .appendingPathComponent("game-state.json", isDirectory: false)
-    }
+    return base
+      .appendingPathComponent("Fazendinha", isDirectory: true)
+      .appendingPathComponent("game-state.json", isDirectory: false)
+  }
 }

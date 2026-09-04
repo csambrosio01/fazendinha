@@ -16,6 +16,8 @@ targets:
       - path: Fazendinha
     settings:
       base:
+        IDEIndentWidth: 2
+        IDETabWidth: 2
         PRODUCT_BUNDLE_IDENTIFIER: com.csambrosio01.fazendinha
         PRODUCT_NAME: Fazendinha
         CODE_SIGN_STYLE: Automatic
