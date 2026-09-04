@@ -4,7 +4,7 @@ Thanks for helping the farm grow.
 
 ## Development setup
 
-1. Install Xcode 16+ and XcodeGen.
+1. Install Xcode 26.6 and XcodeGen.
 2. Run `xcodegen generate` from the repository root.
 3. Open `Fazendinha.xcodeproj` and run the `Fazendinha` scheme.
 4. Run tests before opening a pull request:
@@ -29,4 +29,3 @@ Use a short imperative subject, for example: `Add carrot crop balancing` or `Fix
 ## Pull requests
 
 Include what changed, how it was tested, screenshots for visual changes, and any follow-up work. CI must pass before merging.
-

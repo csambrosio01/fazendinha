@@ -1,4 +1,5 @@
 # Xcode
+*.xcodeproj/
 DerivedData/
 build/
 *.xcuserstate
@@ -34,4 +35,3 @@ fastlane/test_output/
 # Local environment
 .env
 *.local
-

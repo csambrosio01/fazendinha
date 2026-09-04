@@ -16,7 +16,7 @@ The short growth times are intentional for the prototype. The values live in one
 
 ## Open the app
 
-Requirements: macOS, Xcode 16 or newer, and [XcodeGen](https://github.com/yonaskolb/XcodeGen).
+Requirements: macOS, Xcode 26.6, and [XcodeGen](https://github.com/yonaskolb/XcodeGen).
 
 ```sh
 brew install xcodegen
@@ -24,7 +24,17 @@ xcodegen generate
 open Fazendinha.xcodeproj
 ```
 
-Select an iOS 17+ simulator and run the **Fazendinha** scheme. The generated Xcode project is committed for convenience; `project.yml` is its source of truth.
+Select an iOS 17+ simulator and run the **Fazendinha** scheme. `project.yml` is the sole project source of truth; the generated `.xcodeproj` is intentionally ignored and must not be committed.
+
+### Run on a real device
+
+1. Connect your iPhone and trust the Mac if prompted.
+2. Generate and open the project using the commands above.
+3. In **Fazendinha → Signing & Capabilities**, select your Apple Developer team and keep **Automatically manage signing** enabled.
+4. If Xcode reports that the bundle identifier is unavailable, change `PRODUCT_BUNDLE_IDENTIFIER` in `project.yml`, regenerate the project, and reopen it.
+5. Select your iPhone as the run destination and press **Run**.
+
+The developer team is deliberately not stored in `project.yml`, so personal signing details stay out of version control.
 
 ## Architecture
 

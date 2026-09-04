@@ -6,7 +6,7 @@ This repository is designed for iterative, AI-assisted development.
 
 1. Read `README.md` and `Docs/ARCHITECTURE.md`.
 2. Keep domain rules independent from SwiftUI, file storage, and HTTP.
-3. Treat `project.yml` as the Xcode project source of truth. Run `xcodegen generate` after adding or moving files.
+3. Treat `project.yml` as the sole Xcode project source of truth. Run `xcodegen generate` after adding or moving files, and never commit the generated `.xcodeproj`.
 4. Preserve local-first behavior unless a task explicitly changes the product direction.
 
 ## Definition of done
@@ -23,4 +23,3 @@ This repository is designed for iterative, AI-assisted development.
 - New actions: add a method to `GameStore` and cover its transaction with a test.
 - New persistence: implement `GameRepository` and inject it at the composition root.
 - Server sync: implement the documented conflict policy before enabling `RemoteGameRepository` in production.
-
