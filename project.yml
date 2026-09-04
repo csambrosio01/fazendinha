@@ -1,0 +1,51 @@
+name: Fazendinha
+options:
+  bundleIdPrefix: com.csambrosio01
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+targets:
+  Fazendinha:
+    type: application
+    platform: iOS
+    sources:
+      - path: Fazendinha
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.csambrosio01.fazendinha
+        PRODUCT_NAME: Fazendinha
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Fazendinha
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.games
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTS_MACCATALYST: NO
+  FazendinhaTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: FazendinhaTests
+    dependencies:
+      - target: Fazendinha
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.csambrosio01.fazendinha.tests
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  Fazendinha:
+    build:
+      targets:
+        Fazendinha: all
+        FazendinhaTests: [test]
+    test:
+      gatherCoverageData: true
+      targets:
+        - FazendinhaTests
+

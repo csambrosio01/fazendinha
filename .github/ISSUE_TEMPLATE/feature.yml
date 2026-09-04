@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest a player-facing improvement
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Player outcome
+      description: What should a player be able to do?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Proposed scope
+      description: Include rules, UI states, and edge cases if known.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Acceptance checks
+      description: What observable behavior means this is complete?
+
