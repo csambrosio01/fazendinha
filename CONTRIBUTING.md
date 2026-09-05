@@ -10,12 +10,12 @@ Thanks for helping the farm grow.
 4. Run tests before opening a pull request:
 
    ```sh
-   make test
+   make ci-local
    ```
 
 ## Working agreements
 
-- Open or claim an issue before a large change.
+- Open or claim a GitHub issue before starting a change that will be submitted.
 - Keep pull requests focused and describe the player-visible outcome.
 - Put game rules in `Domain` or `Application`, not inside SwiftUI views.
 - Add accessibility labels to interactive UI.
@@ -28,4 +28,4 @@ Use a short imperative subject, for example: `Add carrot crop balancing` or `Fix
 
 ## Pull requests
 
-Include what changed, how it was tested, screenshots for visual changes, and any follow-up work. CI must pass before merging.
+Include what changed, how it was tested, screenshots for visual changes, and any follow-up work. Every pull request must reference the issue it addresses (for example, `Closes #123`). CI runs after the change reaches `main`.

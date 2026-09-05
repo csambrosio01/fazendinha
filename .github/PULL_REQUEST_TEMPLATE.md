@@ -2,6 +2,10 @@
 
 <!-- What changes for the player or contributor? -->
 
+## Issue
+
+<!-- Every pull request must address a GitHub issue, for example: Closes #123 -->
+
 ## Implementation
 
 <!-- Summarize the important technical decisions. -->
@@ -16,4 +20,3 @@
 ## Follow-up
 
 <!-- Note intentionally deferred work. -->
-
