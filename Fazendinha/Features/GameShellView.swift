@@ -8,24 +8,11 @@ struct GameShellView: View {
       if store.isLoading {
         LoadingFarmView()
       } else {
-        TabView {
-          NavigationStack {
-            FarmView()
-          }
-          .tabItem {
-            Label("Farm", systemImage: "leaf.fill")
-          }
-
-          NavigationStack {
-            MarketView()
-          }
-          .tabItem {
-            Label("Market", systemImage: "basket.fill")
-          }
-        }
+        FarmView()
         .tint(Color.farmGreen)
       }
     }
+    .preferredColorScheme(.light)
     .alert(
       "Farm update",
       isPresented: Binding(
@@ -53,8 +40,10 @@ private struct LoadingFarmView: View {
       .ignoresSafeArea()
 
       VStack(spacing: 16) {
-        Text("🌱")
-          .font(.system(size: 64))
+        Image(systemName: "leaf.fill")
+          .font(.system(size: 52, weight: .medium))
+          .foregroundStyle(Color.farmGreen)
+          .accessibilityHidden(true)
         ProgressView()
           .tint(Color.farmGreen)
         Text("Preparing your farm…")

@@ -1,4 +1,4 @@
-.PHONY: generate test build
+.PHONY: generate test ci-local build
 
 generate:
 	xcodegen generate
@@ -8,3 +8,6 @@ build: generate
 
 test: generate
 	xcodebuild -project Fazendinha.xcodeproj -scheme Fazendinha -destination 'platform=iOS Simulator,name=iPhone 17 Pro' CODE_SIGNING_ALLOWED=NO test
+
+# Mirrors the GitHub Actions test command without consuming hosted CI minutes.
+ci-local: test
