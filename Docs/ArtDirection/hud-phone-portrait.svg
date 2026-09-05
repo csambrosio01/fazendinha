@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="667" viewBox="0 0 375 667" role="img" aria-labelledby="title desc">
+<title id="title">hud phone portrait — proposed Fazendinha HUD</title>
+<desc id="desc">Original code-drawn schematic. Proposed design, not an app capture or production art. Orientations and safe areas are schematic, not device validated or enforced. Touch controls are at least 44 logical points; ordinary player text is at least 17 points. Small captions are design annotations.</desc>
+<rect x="0" y="0" width="375" height="667" rx="0" fill="#F7F1E5" stroke="none" />
+<rect x="8" y="8" width="359" height="651" rx="14" fill="none" stroke="#B6AD9F" stroke-dasharray="3 5"/>
+<text x="16" y="655" fill="#31291F" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start">PROPOSED · safe area schematic · not device validated</text>
+<text x="18" y="44" fill="#31291F" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start">Fazendinha</text>
+<rect x="259" y="20" width="100" height="40" rx="14" fill="#F7F1E5" stroke="#315B3A" />
+<text x="309.0" y="46" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle">120 coins</text>
+<rect x="16" y="73" width="107" height="44" rx="12" fill="#F7F1E5" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="69.5" y="100.95" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle">Market</text>
+<rect x="131" y="73" width="99" height="44" rx="12" fill="#F7F1E5" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="180.5" y="100.95" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle">Fields</text>
+<rect x="238" y="73" width="121" height="44" rx="12" fill="#F7F1E5" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="298.5" y="100.95" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle">Reset camera</text>
+<rect x="16" y="127" width="343" height="245" rx="24" fill="#E6E7D5" stroke="none" />
+<text x="29" y="366" fill="#315B3A" font-family="Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start">FARM SCHEMATIC · 6 selectable fields</text>
+<rect x="57.16" y="156.4" width="61.739999999999995" height="46.55" rx="3" fill="#F7F1E5" stroke="#31291F" />
+<path d="M50.16,156.4 L88.03,130.7975 L125.89999999999999,156.4 Z" fill="#C47151" stroke="#31291F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="78.76899999999999" y="177.3475" width="18.522" height="25.6025" rx="2" fill="#F7F1E5" stroke="#31291F" />
+<path d="M80.62119999999999,179.675 L95.43879999999999,200.157 M95.43879999999999,179.675 L80.62119999999999,200.157" fill="none" stroke="#31291F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="43.44" y="211.52499999999998" width="288.12" height="9.8" rx="8" fill="#F7F1E5" stroke="none" />
+<path d="M262.96,168.65 v26.95" fill="none" stroke="#31291F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="262.96" cy="168.65" r="15.925" fill="#315B3A" stroke="none" />
+<circle cx="256.59" cy="164.24" r="8.575000000000001" fill="#658161" stroke="none" />
+<path d="M314.41,180.9 v26.95" fill="none" stroke="#31291F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="314.41" cy="180.9" r="15.925" fill="#315B3A" stroke="none" />
+<circle cx="308.04" cy="176.49" r="8.575000000000001" fill="#658161" stroke="none" />
+<rect x="29.434166666666655" y="234.1875" width="87.465" height="50.224999999999994" rx="10" fill="#BA9B76" stroke="#31291F" />
+<path d="M41.679266666666656,246.74375 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M41.679266666666656,261.81125000000003 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52.17506666666665,267.95903500000003 L52.17506666666665,249.67885" fill="none" stroke="#315B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52.17506666666665,259.3 Q38.70545666666665,243.90616 37.74334166666665,255.45154000000002 Q47.36449166666665,263.14846 52.17506666666665,259.3" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52.17506666666665,255.45154000000002 Q64.68256166666666,240.0577 66.60679166666665,251.60308 Q56.023526666666655,259.3 52.17506666666665,255.45154000000002" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="45.44026166666665" cy="263.53330600000004" r="4.233306" fill="#C47151" stroke="#31291F" />
+<circle cx="58.33260266666665" cy="259.684846" r="4.618152" fill="#C47151" stroke="#31291F" />
+<path d="M94.15826666666666,267.95903500000003 L94.15826666666666,249.67885" fill="none" stroke="#315B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M94.15826666666666,259.3 Q80.68865666666666,243.90616 79.72654166666666,255.45154000000002 Q89.34769166666666,263.14846 94.15826666666666,259.3" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M94.15826666666666,255.45154000000002 Q106.66576166666667,240.0577 108.58999166666666,251.60308 Q98.00672666666667,259.3 94.15826666666666,255.45154000000002" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="87.42346166666667" cy="263.53330600000004" r="4.233306" fill="#C47151" stroke="#31291F" />
+<circle cx="100.31580266666666" cy="259.684846" r="4.618152" fill="#C47151" stroke="#31291F" />
+<rect x="143.76749999999998" y="234.1875" width="87.465" height="50.224999999999994" rx="10" fill="#BA9B76" stroke="#31291F" />
+<path d="M156.0126,246.74375 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M156.0126,261.81125000000003 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M166.5084,267.95903500000003 L166.5084,249.67885" fill="none" stroke="#315B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M166.5084,259.3 Q153.03879,243.90616 152.076675,255.45154000000002 Q161.697825,263.14846 166.5084,259.3" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M166.5084,255.45154000000002 Q179.015895,240.0577 180.940125,251.60308 Q170.35685999999998,259.3 166.5084,255.45154000000002" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="159.773595" cy="263.53330600000004" r="4.233306" fill="#C47151" stroke="#31291F" />
+<circle cx="172.665936" cy="259.684846" r="4.618152" fill="#C47151" stroke="#31291F" />
+<path d="M208.4916,267.95903500000003 L208.4916,249.67885" fill="none" stroke="#315B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M208.4916,259.3 Q195.02199000000002,243.90616 194.059875,255.45154000000002 Q203.681025,263.14846 208.4916,259.3" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M208.4916,255.45154000000002 Q220.999095,240.0577 222.923325,251.60308 Q212.34006,259.3 208.4916,255.45154000000002" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="201.756795" cy="263.53330600000004" r="4.233306" fill="#C47151" stroke="#31291F" />
+<circle cx="214.649136" cy="259.684846" r="4.618152" fill="#C47151" stroke="#31291F" />
+<rect x="258.10083333333336" y="234.1875" width="87.465" height="50.224999999999994" rx="10" fill="#BA9B76" stroke="#31291F" />
+<path d="M270.3459333333334,246.74375 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M270.3459333333334,261.81125000000003 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M280.84173333333337,267.95903500000003 L280.84173333333337,249.67885" fill="none" stroke="#315B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M280.84173333333337,259.3 Q267.3721233333334,243.90616 266.4100083333334,255.45154000000002 Q276.03115833333334,263.14846 280.84173333333337,259.3" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M280.84173333333337,255.45154000000002 Q293.3492283333334,240.0577 295.27345833333334,251.60308 Q284.69019333333335,259.3 280.84173333333337,255.45154000000002" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="274.10692833333337" cy="263.53330600000004" r="4.233306" fill="#C47151" stroke="#31291F" />
+<circle cx="286.99926933333336" cy="259.684846" r="4.618152" fill="#C47151" stroke="#31291F" />
+<path d="M322.8249333333334,267.95903500000003 L322.8249333333334,249.67885" fill="none" stroke="#315B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M322.8249333333334,259.3 Q309.3553233333334,243.90616 308.3932083333334,255.45154000000002 Q318.01435833333335,263.14846 322.8249333333334,259.3" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M322.8249333333334,255.45154000000002 Q335.3324283333334,240.0577 337.25665833333335,251.60308 Q326.67339333333337,259.3 322.8249333333334,255.45154000000002" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="316.0901283333334" cy="263.53330600000004" r="4.233306" fill="#C47151" stroke="#31291F" />
+<circle cx="328.98246933333337" cy="259.684846" r="4.618152" fill="#C47151" stroke="#31291F" />
+<rect x="29.434166666666655" y="300.33750000000003" width="87.465" height="50.224999999999994" rx="10" fill="#BA9B76" stroke="#31291F" />
+<path d="M41.679266666666656,312.89375000000007 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M41.679266666666656,327.96125000000006 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52.17506666666665,334.10903500000006 L52.17506666666665,315.82885000000005" fill="none" stroke="#315B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52.17506666666665,325.45000000000005 Q38.70545666666665,310.05616000000003 37.74334166666665,321.60154000000006 Q47.36449166666665,329.29846000000003 52.17506666666665,325.45000000000005" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52.17506666666665,321.60154000000006 Q64.68256166666666,306.20770000000005 66.60679166666665,317.75308000000007 Q56.023526666666655,325.45000000000005 52.17506666666665,321.60154000000006" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="45.44026166666665" cy="329.6833060000001" r="4.233306" fill="#C47151" stroke="#31291F" />
+<circle cx="58.33260266666665" cy="325.834846" r="4.618152" fill="#C47151" stroke="#31291F" />
+<path d="M94.15826666666666,334.10903500000006 L94.15826666666666,315.82885000000005" fill="none" stroke="#315B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M94.15826666666666,325.45000000000005 Q80.68865666666666,310.05616000000003 79.72654166666666,321.60154000000006 Q89.34769166666666,329.29846000000003 94.15826666666666,325.45000000000005" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M94.15826666666666,321.60154000000006 Q106.66576166666667,306.20770000000005 108.58999166666666,317.75308000000007 Q98.00672666666667,325.45000000000005 94.15826666666666,321.60154000000006" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="87.42346166666667" cy="329.6833060000001" r="4.233306" fill="#C47151" stroke="#31291F" />
+<circle cx="100.31580266666666" cy="325.834846" r="4.618152" fill="#C47151" stroke="#31291F" />
+<rect x="143.76749999999998" y="300.33750000000003" width="87.465" height="50.224999999999994" rx="10" fill="#BA9B76" stroke="#31291F" />
+<path d="M156.0126,312.89375000000007 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M156.0126,327.96125000000006 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="139.76749999999998" y="296.33750000000003" width="95.465" height="58.224999999999994" rx="14" fill="none" stroke="#315B3A" stroke-width="3"/>
+<circle cx="187.5" cy="325.45000000000005" r="13" fill="#F7F1E5" stroke="#315B3A" />
+<text x="187.5" y="331.45000000000005" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">5</text>
+<path d="M215.4888,307.87125000000003 l4,4 l7,-8" fill="none" stroke="#F7F1E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="258.10083333333336" y="300.33750000000003" width="87.465" height="50.224999999999994" rx="10" fill="#BA9B76" stroke="#31291F" />
+<path d="M270.3459333333334,312.89375000000007 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M270.3459333333334,327.96125000000006 h62.9748" fill="none" stroke="#D9BE99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M280.84173333333337,334.10903500000006 L280.84173333333337,315.82885000000005" fill="none" stroke="#315B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M280.84173333333337,325.45000000000005 Q267.3721233333334,310.05616000000003 266.4100083333334,321.60154000000006 Q276.03115833333334,329.29846000000003 280.84173333333337,325.45000000000005" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M280.84173333333337,321.60154000000006 Q293.3492283333334,306.20770000000005 295.27345833333334,317.75308000000007 Q284.69019333333335,325.45000000000005 280.84173333333337,321.60154000000006" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="274.10692833333337" cy="329.6833060000001" r="4.233306" fill="#C47151" stroke="#31291F" />
+<circle cx="286.99926933333336" cy="325.834846" r="4.618152" fill="#C47151" stroke="#31291F" />
+<path d="M322.8249333333334,334.10903500000006 L322.8249333333334,315.82885000000005" fill="none" stroke="#315B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M322.8249333333334,325.45000000000005 Q309.3553233333334,310.05616000000003 308.3932083333334,321.60154000000006 Q318.01435833333335,329.29846000000003 322.8249333333334,325.45000000000005" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M322.8249333333334,321.60154000000006 Q335.3324283333334,306.20770000000005 337.25665833333335,317.75308000000007 Q326.67339333333337,325.45000000000005 322.8249333333334,321.60154000000006" fill="#315B3A" stroke="#315B3A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="316.0901283333334" cy="329.6833060000001" r="4.233306" fill="#C47151" stroke="#31291F" />
+<circle cx="328.98246933333337" cy="325.834846" r="4.618152" fill="#C47151" stroke="#31291F" />
+<rect x="16" y="386" width="343" height="246" rx="20" fill="#F7F1E5" stroke="#315B3A" />
+<text x="30" y="416" fill="#315B3A" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start">✓ Field 5 selected</text>
+<text x="30" y="447" fill="#31291F" font-family="Arial, sans-serif" font-size="19" font-weight="400" text-anchor="start">Fresh soil, ready to plant</text>
+<rect x="30.0" y="467" width="99.66666666666667" height="52" rx="12" fill="#F7F1E5" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="79.83333333333334" y="498.95" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle">Grain</text>
+<rect x="137.66666666666669" y="467" width="99.66666666666667" height="52" rx="12" fill="#F7F1E5" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="187.50000000000003" y="498.95" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle">Rice</text>
+<rect x="245.33333333333334" y="467" width="99.66666666666667" height="52" rx="12" fill="#F7F1E5" stroke="#315B3A" stroke-width="2" data-touch-target="true" data-disabled="false"/>
+<rect x="249.33333333333334" y="471" width="91.66666666666667" height="44" rx="8" fill="none" stroke="#315B3A" />
+<text x="295.1666666666667" y="498.95" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">✓ Tomato</text>
+<text x="30" y="546" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="start">Tomato · 8 coins · 90 seconds</text>
+<rect x="30" y="568" width="315" height="48" rx="12" fill="#315B3A" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="187.5" y="597.95" fill="#F7F1E5" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">Plant</text>
+</svg>

@@ -57,6 +57,8 @@ Switching to a server later means injecting `RemoteGameRepository` instead of `L
 
 The 3D scene uses RealityKit's [fully virtual camera mode](https://developer.apple.com/documentation/realitykit/arview/cameramode-swift.enum/nonar). It requires no camera permission, AR session, network connection, or downloaded art. The geometry is intentionally procedural prototype art: replace it with authored models in `FarmEntityFactory` as the game develops. Existing version-1 saves remain compatible.
 
+The [art and UX direction](Docs/ART_UX_DIRECTION.md) defines the original warm crafted countryside identity, landscape-first phone/tablet concepts, and accessibility criteria for future art and UI work. Its mood boards and HUD diagrams are design studies; the running prototype is unchanged.
+
 ### Prototype validation
 
 Run `make test` on macOS. Before opening a pull request, run `make ci-local`. For an interactive check, plant each crop, rotate and zoom the farm, harvest a ready crop, sell it in the Market, and relaunch to verify the saved balance and fields. Check the Fields list with VoiceOver and try Reduce Motion in Accessibility settings. Final art, sound, character navigation, and physical-device performance tuning are future milestones.
