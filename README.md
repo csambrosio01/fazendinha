@@ -67,6 +67,26 @@ Run `make test` on macOS. Before opening a pull request, run `make ci-local`. Fo
 
 Start with [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](AGENTS.md), and the issues marked `good first issue`. Run the build and tests locally before a pull request; GitHub Actions runs after changes reach `main`.
 
+### CI and troubleshooting
+
+The iOS workflow uses `macos-26` and Xcode 26.6. It installs XcodeGen and runs
+`make ci-local`, which prints the Xcode, Swift, and XcodeGen versions, generates
+the project from `project.yml`, and builds and tests on the iPhone 17 Pro simulator.
+A fresh checkout needs no generated project or other local files.
+
+Update `runs-on` and `XCODE_VERSION` in `.github/workflows/ios.yml` when changing
+the hosted toolchain. The shared simulator default lives in `Makefile`; inspect
+available devices with `xcrun simctl list devices available`. To use another
+installed simulator locally, override the destination:
+
+```sh
+make ci-local SIMULATOR_DESTINATION='platform=iOS Simulator,name=iPhone 17 Pro,OS=latest'
+```
+
+For a manual hosted run, open **Actions → iOS → Run workflow** and select `main`.
+The workflow accepts pushes to `main` and manual dispatch only; its job skips
+manual runs on other branches. Pull requests do not trigger CI.
+
 ## License
 
 Fazendinha is available under the [MIT License](LICENSE).
