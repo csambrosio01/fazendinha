@@ -19,6 +19,8 @@ RealityKit renderer   Local JSON storage   Remote HTTP adapter
 
 `GameState` is the aggregate persisted by the repository. `GameStore` creates a draft, validates and applies an action, saves it, then publishes it. A failed save does not expose a half-applied state to the UI or renderer.
 
+Local saves use atomic file replacement. Only a missing file starts a new farm; read and decode failures show an accessible retry screen and block game actions until loading succeeds. Retrying never deletes or overwrites the unreadable file. The version-1 JSON format is unchanged; schema routing and migrations remain a separate milestone. Disk persistence tests use a unique temporary directory per test and fresh repository/store instances to simulate relaunches.
+
 ## 3D presentation
 
 The app uses a fully virtual RealityKit `ARView` (`.nonAR`, automatic AR session configuration disabled), bridged to SwiftUI by `FarmSceneView`. SwiftUI supplies the HUD, sheets, and accessible controls. RealityKit supplies the world, lighting, camera, collision-based picking, and frame animation. The iOS 17 deployment target is preserved.

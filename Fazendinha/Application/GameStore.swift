@@ -6,6 +6,7 @@ final class GameStore: ObservableObject {
   @Published private(set) var state: GameState
   @Published private(set) var isLoading = true
   @Published private(set) var isSaving = false
+  @Published private(set) var loadFailed = false
   @Published var presentedError: String?
 
   private let repository: any GameRepository
@@ -24,19 +25,22 @@ final class GameStore: ObservableObject {
   func loadIfNeeded() async {
     guard !hasLoaded else { return }
     hasLoaded = true
+    isLoading = true
+    loadFailed = false
+    presentedError = nil
 
     do {
       state = try await repository.load() ?? .newGame(now: clock.now)
     } catch {
-      presentedError = "Your saved farm could not be opened. A new farm has been started."
-      state = .newGame(now: clock.now)
+      hasLoaded = false
+      loadFailed = true
     }
 
     isLoading = false
   }
 
   func plant(_ seed: SeedType, in plotID: UUID) async {
-    guard !isSaving else { return }
+    guard hasLoaded, !isLoading, !isSaving else { return }
     do {
       var draft = state
       guard let index = draft.plots.firstIndex(where: { $0.id == plotID }) else {
@@ -58,7 +62,7 @@ final class GameStore: ObservableObject {
   }
 
   func harvest(plotID: UUID) async {
-    guard !isSaving else { return }
+    guard hasLoaded, !isLoading, !isSaving else { return }
     do {
       var draft = state
       guard let index = draft.plots.firstIndex(where: { $0.id == plotID }) else {
@@ -80,7 +84,7 @@ final class GameStore: ObservableObject {
   }
 
   func sell(_ seed: SeedType) async {
-    guard !isSaving else { return }
+    guard hasLoaded, !isLoading, !isSaving else { return }
     do {
       var draft = state
       let quantity = draft.inventory[seed, default: 0]
@@ -95,7 +99,7 @@ final class GameStore: ObservableObject {
   }
 
   func sellAll() async {
-    guard !isSaving else { return }
+    guard hasLoaded, !isLoading, !isSaving else { return }
     do {
       var draft = state
       guard draft.inventoryValue > 0 else { throw GameRuleError.nothingToSell }

@@ -310,6 +310,11 @@ final class GameStoreTests: XCTestCase {
 
     XCTAssertTrue(store.isLoading)
     XCTAssertEqual(store.state, placeholder)
+    for action in Action.allCases {
+      await action.perform(on: store)
+    }
+    let saves = await repository.savedDrafts
+    XCTAssertTrue(saves.isEmpty)
     let loads = await repository.loadCount
     XCTAssertEqual(loads, 1)
     await repository.resumeLoad()
@@ -333,7 +338,7 @@ final class GameStoreTests: XCTestCase {
     XCTAssertEqual(store.state.coins, 47)
   }
 
-  func testLoadFailureShowsDismissibleErrorWithoutOverwritingStoredFarm() async {
+  func testLoadFailureBlocksEveryActionAndCanRetryWithoutOverwritingStoredFarm() async {
     let initial = farm()
     let repository = InMemoryGameRepository(initial: initial, failLoad: true)
     let store = GameStore(repository: repository, clock: FixedClock(now: now))
@@ -342,15 +347,20 @@ final class GameStoreTests: XCTestCase {
     assertNewFarm(store.state)
     XCTAssertFalse(store.isLoading)
     XCTAssertFalse(store.isSaving)
-    XCTAssertFalse(store.presentedError?.isEmpty ?? true)
+    XCTAssertTrue(store.loadFailed)
+    for action in Action.allCases {
+      await action.perform(on: store)
+    }
     let stored = await repository.storedState
     let saves = await repository.savedDrafts
     XCTAssertEqual(stored, initial)
     XCTAssertTrue(saves.isEmpty)
-    let fallback = store.state
-    store.dismissError()
-    XCTAssertNil(store.presentedError)
-    XCTAssertEqual(store.state, fallback)
+    await repository.setLoadFailure(false)
+    await store.loadIfNeeded()
+    XCTAssertFalse(store.loadFailed)
+    XCTAssertEqual(store.state, initial)
+    await store.sellAll()
+    XCTAssertGreaterThan(store.state.coins, initial.coins)
   }
 
   func testEachCropCompletesPlantHarvestSellAndReloadWithStablePlotIdentity() async {
@@ -482,7 +492,7 @@ private actor InMemoryGameRepository: GameRepository {
   private(set) var savedDrafts: [GameState] = []
   private(set) var loadCount = 0
   private var failSave = false
-  private let failLoad: Bool
+  private var failLoad: Bool
   private var saveResponse: GameState?
   private var saveStarted: XCTestExpectation?
   private var loadStarted: XCTestExpectation?
@@ -494,6 +504,7 @@ private actor InMemoryGameRepository: GameRepository {
     self.failLoad = failLoad
   }
 
+  func setLoadFailure(_ value: Bool) { failLoad = value }
   func setSaveFailure(_ value: Bool) { failSave = value }
   func setSaveResponse(_ state: GameState) { saveResponse = state }
   func pauseNextSave(started: XCTestExpectation) { saveStarted = started }

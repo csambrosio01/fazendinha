@@ -19,11 +19,12 @@ actor LocalGameRepository: GameRepository {
   }
 
   func load() async throws -> GameState? {
-    guard FileManager.default.fileExists(atPath: fileURL.path) else {
+    let data: Data
+    do {
+      data = try Data(contentsOf: fileURL)
+    } catch CocoaError.fileReadNoSuchFile {
       return nil
     }
-
-    let data = try Data(contentsOf: fileURL)
     return try decoder.decode(GameState.self, from: data)
   }
 
