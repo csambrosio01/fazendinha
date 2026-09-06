@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1220" viewBox="0 0 1600 1220" role="img" aria-labelledby="title desc">
+<title id="title">hud states — proposed Fazendinha HUD</title>
+<desc id="desc">Original code-drawn schematic. Proposed design, not an app capture or production art. Orientations and safe areas are schematic, not device validated or enforced. Touch controls are at least 44 logical points; ordinary player text is at least 17 points. Small captions are design annotations.</desc>
+<rect x="0" y="0" width="1600" height="1220" rx="0" fill="#F7F1E5" stroke="none" />
+<text x="54" y="61" fill="#31291F" font-family="Arial, sans-serif" font-size="36" font-weight="700" text-anchor="start">Quiet, readable feedback</text>
+<text x="54" y="99" fill="#31291F" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start">PROPOSED HUD STATES · English / Português · original schematic, not app captures</text>
+<rect x="54" y="135" width="478" height="294" rx="20" fill="#F7F1E5" stroke="#315B3A" />
+<text x="76" y="174" fill="#315B3A" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start">01 / EMPTY</text>
+<text x="76" y="214" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start">Fresh soil, ready to plant</text>
+<text x="76" y="243" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start">Terra pronta para plantar</text>
+<rect x="76" y="354" width="434" height="50" rx="12" fill="#315B3A" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="293.0" y="384.95" fill="#F7F1E5" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">Plant / Plantar</text>
+<rect x="560" y="135" width="478" height="294" rx="20" fill="#F7F1E5" stroke="#315B3A" />
+<text x="582" y="174" fill="#315B3A" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start">02 / GROWING</text>
+<text x="582" y="214" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start">Tomato is growing</text>
+<text x="582" y="243" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start">Tomate está crescendo</text>
+<text x="582" y="272" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start">45 seconds remaining</text>
+<text x="582" y="301" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start">Faltam 45 segundos</text>
+<rect x="582" y="346" width="434" height="14" rx="7" fill="#E1D9CB" stroke="#315B3A" />
+<rect x="582" y="346" width="217" height="14" rx="7" fill="#315B3A" stroke="none" />
+<text x="582" y="396" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="start">50% · status remains visible without motion</text>
+<rect x="1066" y="135" width="478" height="294" rx="20" fill="#F7F1E5" stroke="#315B3A" />
+<text x="1088" y="174" fill="#315B3A" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start">03 / READY</text>
+<text x="1088" y="214" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start">◆ Tomato is ready!</text>
+<text x="1088" y="243" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start">◆ Tomate pronto para colher!</text>
+<rect x="1088" y="354" width="434" height="50" rx="12" fill="#315B3A" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="1305.0" y="384.95" fill="#F7F1E5" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">Harvest / Colher</text>
+<rect x="54" y="460" width="478" height="294" rx="20" fill="#F7F1E5" stroke="#315B3A" stroke-width="2"/>
+<text x="76" y="499" fill="#315B3A" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start">04 / SELECTED</text>
+<text x="76" y="539" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start">✓ Tomato selected</text>
+<text x="76" y="568" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start">✓ Tomate selecionado</text>
+<text x="76" y="597" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start">Double border + checkmark</text>
+<text x="76" y="626" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start">Borda dupla + marca de seleção</text>
+<rect x="76" y="679" width="434" height="50" rx="12" fill="#F7F1E5" stroke="#315B3A" stroke-width="2" data-touch-target="true" data-disabled="false"/>
+<rect x="80" y="683" width="426" height="42" rx="8" fill="none" stroke="#315B3A" />
+<text x="293.0" y="709.95" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">✓ Tomato / Tomate</text>
+<rect x="560" y="460" width="478" height="294" rx="20" fill="#F7F1E5" stroke="#315B3A" />
+<text x="582" y="499" fill="#315B3A" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start">05 / UNAVAILABLE</text>
+<text x="582" y="539" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start">8 coins needed · Balance 4</text>
+<text x="582" y="568" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start">Precisa de 8 moedas · Saldo 4</text>
+<text x="582" y="597" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start">Reason stays readable</text>
+<text x="582" y="626" fill="#31291F" font-family="Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start">O motivo continua legível</text>
+<rect x="582" y="679" width="434" height="50" rx="12" fill="#F7F1E5" stroke="#31291F" stroke-width="1" data-touch-target="true" data-disabled="true"/>
+<text x="799.0" y="709.95" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle">Plant / Plantar — unavailable</text>
+<rect x="1066" y="460" width="478" height="294" rx="20" fill="#F7F1E5" stroke="#315B3A" />
+<text x="1088" y="499" fill="#315B3A" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start">06 / SAVE FAILURE</text>
+<text x="1088" y="539" fill="#31291F" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Farm update / Atualização da fazenda</text>
+<text x="1088" y="568" fill="#31291F" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start">Couldn’t save / Não foi possível salvar</text>
+<text x="1088" y="597" fill="#31291F" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start">Crop and 120 coins stay unchanged.</text>
+<text x="1088" y="626" fill="#31291F" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start">Plantação e 120 moedas preservadas.</text>
+<rect x="1088" y="679" width="434" height="50" rx="12" fill="#F7F1E5" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="1305.0" y="709.95" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle">OK</text>
+<text x="1088" y="659" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="start">Crop/balance retained; no success pulse</text>
+<text x="54" y="824" fill="#315B3A" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start">ENLARGED TEXT / TEXTO AMPLIADO</text>
+<rect x="54" y="846" width="731" height="300" rx="20" fill="#F7F1E5" stroke="#315B3A" />
+<text x="78" y="891" fill="#31291F" font-family="Arial, sans-serif" font-size="30" font-weight="700" text-anchor="start">Field 5</text>
+<text x="78" y="932" fill="#31291F" font-family="Arial, sans-serif" font-size="27" font-weight="400" text-anchor="start">Fresh soil, ready to plant</text>
+<rect x="78" y="955" width="655" height="54" rx="12" fill="#315B3A" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="405.5" y="991.45" fill="#F7F1E5" font-family="Arial, sans-serif" font-size="27" font-weight="700" text-anchor="middle">Plant</text>
+<rect x="78" y="1024" width="655" height="54" rx="12" fill="#F7F1E5" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="405.5" y="1060.45" fill="#31291F" font-family="Arial, sans-serif" font-size="27" font-weight="400" text-anchor="middle">Grain · 3 coins</text>
+<text x="78" y="1121" fill="#31291F" font-family="Arial, sans-serif" font-size="25" font-weight="400" text-anchor="start">↓ Scroll: Rice, Tomato</text>
+<rect x="758" y="872" width="5" height="245" rx="2" fill="#D8D0C3" stroke="none" />
+<rect x="758" y="872" width="5" height="91" rx="2" fill="#315B3A" stroke="none" />
+<rect x="813" y="846" width="731" height="300" rx="20" fill="#F7F1E5" stroke="#315B3A" />
+<text x="837" y="891" fill="#31291F" font-family="Arial, sans-serif" font-size="30" font-weight="700" text-anchor="start">Canteiro 5</text>
+<text x="837" y="932" fill="#31291F" font-family="Arial, sans-serif" font-size="27" font-weight="400" text-anchor="start">Terra pronta para plantar</text>
+<rect x="837" y="955" width="655" height="54" rx="12" fill="#315B3A" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="1164.5" y="991.45" fill="#F7F1E5" font-family="Arial, sans-serif" font-size="27" font-weight="700" text-anchor="middle">Plantar</text>
+<rect x="837" y="1024" width="655" height="54" rx="12" fill="#F7F1E5" stroke="#315B3A" stroke-width="1" data-touch-target="true" data-disabled="false"/>
+<text x="1164.5" y="1060.45" fill="#31291F" font-family="Arial, sans-serif" font-size="27" font-weight="400" text-anchor="middle">Trigo · 3 moedas</text>
+<text x="837" y="1121" fill="#31291F" font-family="Arial, sans-serif" font-size="25" font-weight="400" text-anchor="start">↓ Role: Arroz, Tomate</text>
+<rect x="1517" y="872" width="5" height="245" rx="2" fill="#D8D0C3" stroke="none" />
+<rect x="1517" y="872" width="5" height="91" rx="2" fill="#315B3A" stroke="none" />
+<text x="54" y="1185" fill="#31291F" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="start">Opaque panels · ≥44pt targets · scroll rather than shrink · selected/ready/error states use text or shape · no avatar or new navigation</text>
+</svg>
