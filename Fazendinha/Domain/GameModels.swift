@@ -1,6 +1,6 @@
 import Foundation
 
-enum SeedType: String, CaseIterable, Codable, Hashable, Identifiable, Sendable {
+enum SeedType: String, CaseIterable, Codable, CodingKey, Hashable, Identifiable, Sendable {
   case grain
   case rice
   case tomato
@@ -152,10 +152,10 @@ struct GameState: Codable, Equatable, Sendable {
     plots = try container.decode([FarmPlot].self, forKey: .plots)
     updatedAt = try container.decode(Date.self, forKey: .updatedAt)
 
-    let wireInventory = try container.decode([String: Int].self, forKey: .inventory)
-    inventory = Dictionary(
+    let wireInventory = try container.nestedContainer(keyedBy: SeedType.self, forKey: .inventory)
+    inventory = try Dictionary(
       uniqueKeysWithValues: SeedType.allCases.map { seed in
-        (seed, wireInventory[seed.rawValue, default: 0])
+        (seed, wireInventory.contains(seed) ? try wireInventory.decode(Int.self, forKey: seed) : 0)
       }
     )
   }

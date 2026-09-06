@@ -19,7 +19,15 @@ RealityKit renderer   Local JSON storage   Remote HTTP adapter
 
 `GameState` is the aggregate persisted by the repository. `GameStore` creates a draft, validates and applies an action, saves it, then publishes it. A failed save does not expose a half-applied state to the UI or renderer.
 
-Local saves use atomic file replacement. Only a missing file starts a new farm; read and decode failures show an accessible retry screen and block game actions until loading succeeds. Retrying never deletes or overwrites the unreadable file. The version-1 JSON format is unchanged; schema routing and migrations remain a separate milestone. Disk persistence tests use a unique temporary directory per test and fresh repository/store instances to simulate relaunches.
+Local saves use atomic file replacement. Only a missing file starts a new farm; read and decode failures show an accessible retry screen and block game actions until loading succeeds. Retrying never deletes or overwrites the unreadable file. The version-1 JSON format is unchanged; `GameSaveCodec` routes the version header before decoding the current model. Disk persistence tests use a unique temporary directory per test and fresh repository/store instances to simulate relaunches.
+
+### Save versioning
+
+`GameSaveCodec` is a Foundation-only local serialization boundary. V1 is the first and only released schema. A required integer `schemaVersion` selects the route; unsupported versions, missing steps, invalid step output, and decoding failures propagate to the existing load-failure screen. No guessed legacy format or automatic downgrade is supported.
+
+Future migrations are registered by source version and transform vN JSON bytes into vN+1 JSON bytes. Each step must write its new version, preserve unrelated fields, and avoid storage, network access, clocks, and random IDs. The runner checks exact one-version advancement, applies all steps in memory, and decodes `GameState` only after reaching the target. Loading never rewrites a file; the next successful game transaction atomically writes the current version. Encoding rejects states with a different schema version.
+
+Before changing persisted fields, retain the released fixtures, add a deterministic migration and fixtures for the new version, register the step in the codec's production defaults, then increment `GameState.currentSchemaVersion`. Tests cover ordered synthetic v1→v2→v3 transformations, failures, and the real v1 format without shipping a future gameplay schema. See [API contract](API_CONTRACT.md#local-save-compatibility) for field compatibility and failure policy. Remote API versioning remains separate and is not enabled by this local-save work.
 
 ## 3D presentation
 
