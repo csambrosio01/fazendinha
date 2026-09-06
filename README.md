@@ -63,6 +63,8 @@ The [art and UX direction](Docs/ART_UX_DIRECTION.md) defines the original warm c
 
 ### Prototype validation
 
+Physical-device profiling is tracked in the [performance budgets and checklist](Docs/PERFORMANCE_BUDGETS.md) and [baseline record](Docs/PERFORMANCE_BASELINE.md). The budgets are provisional; physical measurements and issue #45 acceptance are still pending.
+
 Run `make test` on macOS. Before opening a pull request, run `make ci-local`. For an interactive check, plant each crop, rotate and zoom the farm, harvest a ready crop, sell it in the Market, and relaunch to verify the saved balance and fields. Check the Fields list with VoiceOver and try Reduce Motion in Accessibility settings. Final art, sound, character navigation, and physical-device performance tuning are future milestones.
 
 ## Contributing
