@@ -20,6 +20,8 @@ Fazendinha is a cozy, local-first 3D farming game for iPhone and iPad. A Reality
 
 The short growth times are intentional for the prototype. The values live in one place (`SeedType`) so balancing them later is straightforward.
 
+The [economy baseline](Docs/ECONOMY_BASELINE.md) records crop trade-offs, five- and ten-minute session targets, and low-coin recovery. Deterministic simulations protect these expectations before progression adds new purchases.
+
 ## Open the app
 
 Requirements: macOS, Xcode 26.6, and [XcodeGen](https://github.com/yonaskolb/XcodeGen).
