@@ -7,6 +7,16 @@ struct GameShellView: View {
     Group {
       if store.isLoading {
         LoadingFarmView()
+      } else if store.loadFailed {
+        ContentUnavailableView {
+          Label("Your farm could not be opened", systemImage: "externaldrive.badge.exclamationmark")
+        } description: {
+          Text("Your saved farm has not been changed. Try loading it again.")
+        } actions: {
+          Button("Try again") {
+            Task { await store.loadIfNeeded() }
+          }
+        }
       } else {
         FarmView()
         .tint(Color.farmGreen)
