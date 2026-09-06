@@ -2,20 +2,14 @@ import Foundation
 
 actor LocalGameRepository: GameRepository {
   private let fileURL: URL
-  private let encoder: JSONEncoder
-  private let decoder: JSONDecoder
+  private let codec: GameSaveCodec
 
-  init(fileURL: URL = LocalGameRepository.defaultFileURL()) {
+  init(
+    fileURL: URL = LocalGameRepository.defaultFileURL(),
+    codec: GameSaveCodec = GameSaveCodec()
+  ) {
     self.fileURL = fileURL
-
-    let encoder = JSONEncoder()
-    encoder.dateEncodingStrategy = .iso8601
-    encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-    self.encoder = encoder
-
-    let decoder = JSONDecoder()
-    decoder.dateDecodingStrategy = .iso8601
-    self.decoder = decoder
+    self.codec = codec
   }
 
   func load() async throws -> GameState? {
@@ -25,17 +19,17 @@ actor LocalGameRepository: GameRepository {
     } catch CocoaError.fileReadNoSuchFile {
       return nil
     }
-    return try decoder.decode(GameState.self, from: data)
+    return try codec.decode(data)
   }
 
   func save(_ state: GameState) async throws -> GameState {
+    let data = try codec.encode(state)
     let directory = fileURL.deletingLastPathComponent()
     try FileManager.default.createDirectory(
       at: directory,
       withIntermediateDirectories: true
     )
 
-    let data = try encoder.encode(state)
     try data.write(to: fileURL, options: .atomic)
     return state
   }
